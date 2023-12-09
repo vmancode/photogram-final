@@ -12,4 +12,6 @@
 #  owner_id       :integer
 #
 class Photo < ApplicationRecord
+
+  
 end
