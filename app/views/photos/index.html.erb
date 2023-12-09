@@ -6,7 +6,12 @@
   </div>
 </div>
 
-<hr>
+
+<% if current_user && user_signed_in?%>
+  
+  
+  
+
 
 <div>
   <div>
@@ -61,7 +66,15 @@
   </div>
 </div>
 
-<hr>
+
+</div>
+<% else %>
+  <p></p>
+<% end %>
+
+
+
+
 <div>
   <div>
     <table border="1">
@@ -101,13 +114,13 @@
         </td>
 
         <td>
-          <%= a_photo.id %>
+          <%= a_photo.owner_id  %>
         </td>
 
         <td>
           <%= a_photo.created_at %>
         </td>
-
+<td></td>
         <td>
           <a href="/photos/<%= a_photo.id %>">
             Show details

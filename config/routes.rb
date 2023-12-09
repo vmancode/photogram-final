@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   root to: "users#index"
 
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:path_id", { :controller => "users", :action => "show" })
+  get("/users/you_can_do_this/liked_photos", { :controller => "users", :action => "show" })
+
+
+
   # Routes for the Like resource:
 
   # CREATE

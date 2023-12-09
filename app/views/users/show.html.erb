@@ -1,0 +1,25 @@
+
+
+
+<h1> <%=params.fetch("path_id")%> </h1>
+
+
+
+
+<% if @the_user %>
+  
+  <div>Private</div>
+  <div><%= @the_user.private %></div>
+  
+  
+  
+  
+  
+  
+  
+  <div>
+    <%= @the_user.email %>
+  </div>
+<% else %>
+  <p>User not found</p>
+<% end %>
